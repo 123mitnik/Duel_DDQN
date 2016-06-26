@@ -75,6 +75,7 @@ model.compile(optimizer='adam', loss='mse')
 
 x, z = createLayers()
 target_model = Model(input=x, output=z)
+target_model.compile(optimizer='adam', loss='mse')
 target_model.set_weights(model.get_weights())
 
 prestates = []
